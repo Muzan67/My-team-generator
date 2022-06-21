@@ -25,8 +25,8 @@ const promptEmployee = () => {
         type: 'input',
         name: 'id',
         message: 'What is your team managers id? (Required)',
-        validate: githubInput => {
-          if (githubInput) {
+        validate: idInput => {
+          if (idInput) {
             return true;
           } else {
             console.log('Please enter your team managers id!');
@@ -38,8 +38,8 @@ const promptEmployee = () => {
         type: 'input',
         name: 'email',
         message: 'What is your team managers email? (Required)',
-        validate: githubInput => {
-          if (githubInput) {
+        validate: emailInput => {
+          if (emailInput) {
             return true;
           } else {
             console.log('Please enter your team managers email!');
@@ -51,8 +51,8 @@ const promptEmployee = () => {
         type: 'input',
         name: 'office',
         message: 'What is your team managers office number? (Required)',
-        validate: githubInput => {
-          if (githubInput) {
+        validate: officeInput => {
+          if (officeInput) {
             return true;
           } else {
             console.log('Please enter your team managers office number!');
@@ -91,8 +91,8 @@ if (!employeeData.team) {
             type: 'input',
             name: 'id',
             message: 'What is your team engineers id? (Required)',
-            validate: githubInput => {
-              if (githubInput) {
+            validate: idInput => {
+              if (idInput) {
                 return true;
               } else {
                 console.log('Please enter your team engineers id!');
@@ -104,8 +104,8 @@ if (!employeeData.team) {
             type: 'input',
             name: 'email',
             message: 'What is your team engineers email? (Required)',
-            validate: githubInput => {
-              if (githubInput) {
+            validate: emailInput => {
+              if (emailInput) {
                 return true;
               } else {
                 console.log('Please enter your team engineers email!');
@@ -117,8 +117,8 @@ if (!employeeData.team) {
             type: 'input',
             name: 'office',
             message: 'What is your team engineers Github username? (Required)',
-            validate: githubInput => {
-              if (githubInput) {
+            validate: officeInput => {
+              if (officeInput) {
                 return true;
               } else {
                 console.log('Please enter your team engineers Github username!');
@@ -133,7 +133,8 @@ if (!employeeData.team) {
            default: false
         },
         {
-        return inquirer. prompt([
+            
+    return inquirer.prompt([
             {
                 type: 'input',
                 name: 'name',
@@ -151,8 +152,8 @@ if (!employeeData.team) {
                 type: 'input',
                 name: 'id',
                 message: 'What is your team interns id? (Required)',
-                validate: githubInput => {
-                  if (githubInput) {
+                validate: idInput => {
+                  if (idInput) {
                     return true;
                   } else {
                     console.log('Please enter your team interns id!');
@@ -163,9 +164,9 @@ if (!employeeData.team) {
               {
                 type: 'input',
                 name: 'email',
-                message: 'What is your team interns school? (Required)',
-                validate: githubInput => {
-                  if (githubInput) {
+                message: 'What is your team interns email? (Required)',
+                validate: schoolInput => {
+                  if (schoolInput) {
                     return true;
                   } else {
                     console.log('Please enter your team interns email!');
@@ -176,12 +177,12 @@ if (!employeeData.team) {
               {
                 type: 'input',
                 name: 'office',
-                message: 'What is your team managers office number? (Required)',
-                validate: githubInput => {
-                  if (githubInput) {
+                message: 'What is your interns school name? (Required)',
+                validate: schoolInput => {
+                  if (schoolInput) {
                     return true;
                   } else {
-                    console.log('Please enter your team managers office number!');
+                    console.log('Please enter your interns school name!');
                     return false;
                   }
                   }
@@ -191,12 +192,12 @@ if (!employeeData.team) {
 
     ])
     
-    .then(projectData => {
-      portfolioData.projects.push(projectData);
-      if (projectData.confirmAddProject) {
-        return promptProject(portfolioData);
+    .then(teamData => {
+      employeeData.projects.push(teamData);
+      if (teamtData.confirmAddEmployee) {
+        return promptEmployee(employeeData);
       } else {
-        return portfolioData;
+        return employeeData;
       }
     });
 };
