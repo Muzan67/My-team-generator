@@ -228,11 +228,69 @@ module.exports = Employee;
 //   <head>
 //     <meta charset="utf-8">
 //     <meta name="viewport" content="width=device-width, initial-scale=1">
-//     <title>Bootstrap demo</title>
+//     <title>My Team Generator</title>
+//     <link rel="stylesheet" href="./style.css">
 //     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 //   </head>
+//   <header>
+//     <div class="jumbotron">
+//       <h1 class="display-4">My Team</h1>
+//   </header>
+
 //   <body>
-//     <h1>Hello, world!</h1>
-//     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-//   </body>
+//   <main class="container my-5">
+//     <div class="row">
+      
+//     <div class="col-6 col-md-4">
+//       <div class="card-employee-card">
+//         <div class="manager-body">
+//           <div class="card text-white bg-primary mb-3">
+//             <h2><i class="fa-solid fa-mug-marshmallows"></i>Manager</h2>
+//             <ul class="list-group">
+//               <li class="list-group-item">Name:</li>
+//               <li class="list-group-item">ID:</li>
+//               <li class="list-group-item">Email:</li>
+//               <li class="list-group-item">Office Number:</li>
+//             </ul>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+
+//     <div class="col-6 col-md-4">
+//       <div class="card-employee-card">
+//         <div class="manager-body">
+//           <div class="card text-white bg-primary mb-3">
+//             <h2><i class="fa-solid fa-chalkboard-user"></i>Engineer</h2>
+//             <ul class="list-group">
+//               <li class="list-group-item">Name:</li>
+//               <li class="list-group-item">ID:</li>
+//               <li class="list-group-item">Email:</li>
+//               <li class="list-group-item">Github:</li>
+//             </ul>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+
+//     <div class="col-6 col-md-4">
+//       <div class="card-employee-card">
+//         <div class="manager-body">
+//           <div class="card text-white bg-primary mb-3">
+//             <h2><i class="fa-solid fa-graduation-cap"></i>Intern</h2>
+//             <ul class="list-group">
+//               <li class="list-group-item">Name:</li>
+//               <li class="list-group-item">ID:</li>
+//               <li class="list-group-item">Email:</li>
+//               <li class="list-group-item">School:</li>
+//             </ul>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+    
+//   </row>
+
+// </main>
+    
 // </html>
