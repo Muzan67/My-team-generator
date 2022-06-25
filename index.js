@@ -1,9 +1,12 @@
 const inquirer = require('inquirer');
 const fs =require('fs');
 const generateSite = require('./src/generate-site.js');
+
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+
+const teamMembers = [];
 
 const promptManager = () => {
   return inquirer.prompt([
@@ -138,28 +141,22 @@ const promptEngineer = () => {
     },
     {
       type: 'input',
-      name: 'office',
+      name: 'githubUsername',
       message: 'What is your team engineers Github username? (Required)',
-      validate: officeInput => {
-        if (officeInput) {
+      validate: githubUsername => {
+        if (githubUsername) {
           return true;
         } else {
           console.log('Please enter your team engineers Github username!');
           return false;
         }
       }
-    },
-    {
-      type: 'confirm',
-      name: 'confirmAddTeamMember',
-      message: 'Would you like to enter another team member?',
-      default: false
-    },
-      ]).then(answers => {
+    }
+    ]).then(answers => {
         console.log(answers);
         const engineer = new Engineer(answers.name, answers.Id, answers.email, answers.hithubUsername);
         teamMembers.push(engineer);
-        promptMenu();
+        promptTeam();
       })
     };
 
@@ -212,7 +209,7 @@ const promptEngineer = () => {
               },
               {
                 type: 'input',
-                name: 'office',
+                name: 'school',
                 message: 'What is your interns school name? (Required)',
                 validate: schoolInput => {
                   if (schoolInput) {
@@ -234,7 +231,7 @@ const promptEngineer = () => {
 // TODO: Create a function to write README file
 
 const assembleTeam = () =>
-console.log(`
+    console.log(`
 ================
 Assemble My Team
 ================
