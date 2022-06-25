@@ -1,11 +1,11 @@
 const Engineer = require('../lib/Engineer');
-const Enginerr = new Engineer('alejandro', '10128', 'dontcallmyname@gmail.com', 'guggenheim');
+const Enginerr = new Engineer('alejandro', '10128', 'ac.tendo67@gmail.com', 'Muzan67');
 
 test('creat an Engineer object', () => {
     expect(engineer.name).toBe('alejandro');
     expect(engineer.id).toBe('10128');
-    expect(engineer.email).toBe('dontcallmyname@gmail.com');
-    expect(engineer.githubUsername).toBe('Guggenheim');
+    expect(engineer.email).toBe('ac.tendo67@gmail.com');
+    expect(engineer.githubUsername).toBe('Muzan67');
 });
 
 test('creat an Name object', () => {
@@ -17,11 +17,11 @@ test('creat an Id object', () => {
 });   
 
 test('creat an Email object', () => {   
-    expect(engineer.getEmail()).toBe('dontcallmyname@gmail.com');
+    expect(engineer.getEmail()).toBe('ac.tendo67@gmail.com');
 });
 
 test('creat an Github Username object', () => {   
-    expect(engineer.getGithubUsername()).toBe('1071g');
+    expect(engineer.getGithubUsername()).toBe('Muzan67');
 });
 
 test('creat an Role object', () => {

@@ -1,10 +1,10 @@
 const Intern = require('../lib/Intern');
-const intern = new Intern('alejandro', '10128', 'dontcallmyname@gmail.com', 'Guggenheim');
+const intern = new Intern('alejandro', '10128', 'ac.tendo67@gmail.com', 'Guggenheim');
 
 test('creat an Intern object', () => {
     expect(intern.name).toBe('alejandro');
     expect(intern.id).toBe('10128');
-    expect(intern.email).toBe('dontcallmyname@gmail.com');
+    expect(intern.email).toBe('ac.tendo67@gmail.com');
     expect(intern.school).toBe('Guggenheim');
 });
 
@@ -17,11 +17,11 @@ test('creat an Id object', () => {
 });   
 
 test('creat an Email object', () => {   
-    expect(intern.getEmail()).toBe('dontcallmyname@gmail.com');
+    expect(intern.getEmail()).toBe('ac.tendo67@gmail.com');
 });
 
-test('creat an Office object', () => {   
-    expect(interne.getOfficeNumber()).toBe('1071g');
+test('creat an School object', () => {   
+    expect(interne.getSchool()).toBe('Guggenheim');
 });
 
 test('creat a Role object', () => {

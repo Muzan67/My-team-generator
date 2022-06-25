@@ -1,10 +1,10 @@
 const Employee = require('../lib/Employee');
-const employee = new Employee('alejandro', '10128', 'dontcallmyname@gmail');
+const employee = new Employee('alejandro', '10128', 'ac.tendo67@gmail');
 
 test('creat an Employee object', () => {
     expect(employee.name).toBe('alejandro');
     expect(employee.id).toBe('10128');
-    expect(employee.email).toBe('dontcallmyname@gmail.com');
+    expect(employee.email).toBe('ac.tendo67@gmail.com');
 });
 
 test('creat an Name object', () => {
@@ -16,7 +16,7 @@ test('creat an Id object', () => {
 });   
 
 test('creat an Email object', () => {   
-    expect(employee.getEmail()).toBe('dontcallmyname@gmail.com');
+    expect(employee.getEmail()).toBe('ac.tendo67@gmail.com');
 });
 
 test('creat an Role object', () => {
