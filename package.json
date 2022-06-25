@@ -4,7 +4,7 @@
     "jest": "^28.1.1"
   },
   "name": "my-team-generator",
-  "description": "",
+  "description": "My Team Generator",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/Muzan67/My-team-generator.git"
   },
-  "author": "",
+  "author": "Alejandro",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Muzan67/My-team-generator/issues"
