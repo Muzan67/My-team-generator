@@ -11,6 +11,7 @@ const OUTPUT_DIR = path.resolved(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 const teamMembers = [];
 
+// prompt process begins //
 const promptManager = () => {
   return inquirer.prompt([
     {
