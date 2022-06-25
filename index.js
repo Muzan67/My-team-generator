@@ -160,78 +160,78 @@ const promptEngineer = () => {
       })
     };
 
-    const promptIntern = () => {
-      console.log(`
-      ===============
-      Add an Intern
-      ===============
-      `);
+const promptIntern = () => {
+  console.log(`
+  ===============
+  Add an Intern
+  ===============
+  `);
             
-    return inquirer.prompt([
-            {
-                type: 'input',
-                name: 'name',
-                message: 'What is your team interns name? (Required)',
-                validate: nameInput => {
-                    if (nameInput) {
-                      return true;
-                    } else {
-                      console.log('Please enter your team interns name!');
-                      return false; 
-                    }
-                }
-            },
-            {
-                type: 'input',
-                name: 'id',
-                message: 'What is your team interns id? (Required)',
-                validate: idInput => {
-                  if (idInput) {
-                    return true;
-                  } else {
-                    console.log('Please enter your team interns id!');
-                    return false;
-                  }
-                }
-              },
-              {
-                type: 'input',
-                name: 'email',
-                message: 'What is your team interns email? (Required)',
-                validate: schoolInput => {
-                  if (schoolInput) {
-                    return true;
-                  } else {
-                    console.log('Please enter your team interns email!');
-                    return false;
-                  }
-                }
-              },
-              {
-                type: 'input',
-                name: 'school',
-                message: 'What is your interns school name? (Required)',
-                validate: schoolInput => {
-                  if (schoolInput) {
-                    return true;
-                  } else {
-                    console.log('Please enter your interns school name!');
-                    return false;
-                  }
-                  }
-                }   
-              ]).then(answers => {
-                console.log(answers);
-                const manager = new Intern(answers.name, answers.Id, answers.email, answers.school);
-                teamMembers.push(intern);
-                promptTeam();
-              })
-            };
+  return inquirer.prompt([
+   {
+     type: 'input',
+     name: 'name',
+     message: 'What is your team interns name? (Required)',
+     validate: nameInput => {
+       if (nameInput) {
+         return true;
+       } else {
+         console.log('Please enter your team interns name!');
+         return false; 
+       }
+     }
+    },
+   {
+     type: 'input',
+     name: 'id',
+     message: 'What is your team interns id? (Required)',
+     validate: idInput => {
+      if (idInput) {
+        return true;
+      } else {
+        console.log('Please enter your team interns id!');
+        return false;
+      }
+    }
+   },
+   {
+     type: 'input',
+     name: 'email',
+     message: 'What is your team interns email? (Required)',
+     validate: schoolInput => {
+       if (schoolInput) {
+         return true;
+     } else {
+      console.log('Please enter your team interns email!');
+      return false;
+     }
+    }
+   },
+   {
+     type: 'input',
+     name: 'school',
+     message: 'What is your interns school name? (Required)',
+     validate: schoolInput => {
+       if (schoolInput) {
+          return true;
+      } else {
+        console.log('Please enter your interns school name!');
+        return false;
+      }
+    }
+  }   
+]).then(answers => {
+      console.log(answers);
+      const manager = new Intern(answers.name, answers.Id, answers.email, answers.school);
+      teamMembers.push(intern);
+        promptTeam();
+    })
+  };
 
 // TODO: Create a function to write README file
 
 const assembleTeam = () =>
-    console.log(`
+  console.log(`
 ================
 Assemble My Team
 ================
@@ -241,7 +241,6 @@ if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR)
 }
 fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
-
 
 promptManager();
 
