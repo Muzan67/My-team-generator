@@ -1,12 +1,25 @@
-const Employee = require('../lib/Employee.js');
-const { writeFile, copyFile} = require('../lib/Employee');
+const Employee = require('../lib/Employee');
+const employee = new Employee('alejandro', '10128', 'dontcallmyname@gmail');
 
 test('creat an Employee object', () => {
-    const employee = new employee('', '', '', '');
+    expect(employee.name).toBe('alejandro');
+    expect(employee.id).toBe('10128');
+    expect(employee.email).toBe('dontcallmyname@gmail.com');
+});
 
-    expect(employee.name).toBe('');
-    expect(employee.id).toBe('');
-    expect(employee.email).toBe('');
-    expect(employee.role).toBe('');
+test('creat an Name object', () => {
+    expect(employee.getName()).toBe('alejandro');
+});
+
+test('creat an Id object', () => {
+    expect(employee.getId()).toBe('10128');
+});   
+
+test('creat an Email object', () => {   
+    expect(employee.getEmail()).toBe('dontcallmyname@gmail.com');
+});
+
+test('creat an Role object', () => {
+    expect(employee.getRole()).toBe('Employee');
 });
 
