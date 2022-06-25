@@ -11,11 +11,11 @@ const generateTeam = (team) =>
         <div class="card-header">
         ${manager.name} <br/>
         <i class="fa-solid fa-mug-hot"></i>Manager</div>
-        <ul class="list-group list-group-flush">
+          <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${manager.id}</li>
             <li class="list-group-item">Email: <span id ="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
             <li class="list-group-item">Office Number: ${manager.officeNUmber}</li>
-        </ul>
+          </ul>
     </div>
     `;
     html.push(managerHtml);
@@ -76,7 +76,7 @@ const generateTeam = (team) =>
 // exports to assemble team // 
 module.exports = team => {
 
-return `
+    return `
 <!doctype html>
 <html lang="en">
   <head>
