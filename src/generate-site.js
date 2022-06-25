@@ -3,6 +3,7 @@ const generateTeam = (team) =>
 
     const html = [];
 
+// generate Manager // 
     const generateManager = manager => {
         console.log(manager);
         let managerHtml = `
@@ -20,43 +21,62 @@ const generateTeam = (team) =>
     html.push(managerHtml);
 }
  
-const generateManager = manager => {
-    console.log(manager);
-    let managerHtml = `
+// generate Engineer //
+const generateEngineer = engineer => {
+    console.log(engineer);
+    let engineerHtml = `
 <div class="card" style="width: 18rem;">
     <div class="card-header">
-    ${manager.name} <br/>
+    ${engineer.name} <br/>
     <i class="fa-solid fa-mug-hot"></i>Manager</div>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID: ${manager.id}</li>
-        <li class="list-group-item">Email: <span id ="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
-        <li class="list-group-item">Office Number: ${manager.officeNUmber}</li>
+        <li class="list-group-item">ID: ${engineer.id}</li>
+        <li class="list-group-item">Email: <span id ="email"><a href="mailto:${engineer.email}">${engineer.githubemail}</a></span></li>
+        <li class="list-group-item">Github Username: <a target="_blank" href="https://github.com${engineer.githubUsername}">${engineer.githubUsername}</a></li>
     </ul>
 </div>
 `;
-html.push(managerHtml);
+html.push(engineerHtml);
 }
 
-const generateManager = manager => {
-    console.log(manager);
-    let managerHtml = `
+// generate Intern //
+const generateIntern = intern => {
+    console.log(intern);
+    let internHtml = `
 <div class="card" style="width: 18rem;">
     <div class="card-header">
-    ${manager.name} <br/>
+    ${intern.name} <br/>
     <i class="fa-solid fa-mug-hot"></i>Manager</div>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID: ${manager.id}</li>
-        <li class="list-group-item">Email: <span id ="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
-        <li class="list-group-item">Office Number: ${manager.officeNUmber}</li>
+        <li class="list-group-item">ID: ${intern.id}</li>
+        <li class="list-group-item">Email: <span id ="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
+        <li class="list-group-item">School: ${intern.school}</li>
     </ul>
 </div>
 `;
-html.push(managerHtml);
+html.push(internHtml);
 }
 
 
+for (let i = 0; i < team.length; i++) {
+    if (team[i].getRole() === "Manager") {
+        generateManager(team[i]);
+    }
+    if (team[i].getRole() === "Engineer") {
+        generateEngineer(team[i]);
+    }
+    if (team[i].getRole() === "Intern") {
+        generateIntern(team[i]);
+    }
 
-`
+  
+    return html.join('');
+}
+
+// exports to assemble team // 
+module.exports = team => {
+
+return `
 <!doctype html>
 <html lang="en">
   <head>

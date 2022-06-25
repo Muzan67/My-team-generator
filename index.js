@@ -1,11 +1,14 @@
 const inquirer = require('inquirer');
 const fs =require('fs');
-const generateSite = require('./src/generate-site.js');
 
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const generateSite = require('./src/generate-site.js');
 
+const path = require("path");
+const OUTPUT_DIR = path.resolved(__dirname, "output");
+const outputPath = path.join(OUTPUT_DIR, "team.html");
 const teamMembers = [];
 
 const promptManager = () => {
@@ -67,8 +70,8 @@ const promptManager = () => {
     const manager = new Manager(answers.name, answers.Id, answers.email, answers.officeNumber);
     teamMembers.push(manager);
     promptTeam();
-  })
-};
+    })
+  };
 
 const promptTeam = () => {
   return inquirer.prompt([
@@ -154,11 +157,11 @@ const promptEngineer = () => {
     }
     ]).then(answers => {
         console.log(answers);
-        const engineer = new Engineer(answers.name, answers.Id, answers.email, answers.hithubUsername);
+        const engineer = new Engineer(answers.name, answers.Id, answers.email, answers.githubUsername);
         teamMembers.push(engineer);
         promptTeam();
-      })
-    };
+    })
+  };
 
 const promptIntern = () => {
   console.log(`
@@ -222,13 +225,13 @@ const promptIntern = () => {
   }   
 ]).then(answers => {
       console.log(answers);
-      const manager = new Intern(answers.name, answers.Id, answers.email, answers.school);
+      const intern = new Intern(answers.name, answers.Id, answers.email, answers.school);
       teamMembers.push(intern);
         promptTeam();
     })
   };
 
-// TODO: Create a function to write README file
+// TODO: Create a function to write index.HTML file //
 
 const assembleTeam = () =>
   console.log(`
@@ -237,9 +240,11 @@ Assemble My Team
 ================
 `);
 
+// Creates the path after prompts have been selected to create index.HTML file //
 if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR)
-}
+  }
+ 
 fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
 
 promptManager();
