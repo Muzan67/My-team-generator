@@ -246,8 +246,8 @@ if (!fs.existsSync(OUTPUT_DIR)) {
   fs.mkdirSync(OUTPUT_DIR)
   }
  
-fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
-
-promptManager();
+promptManager().then((data) => {
+  return fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
+});
 
 
