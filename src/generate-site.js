@@ -1,4 +1,4 @@
-const generateTeam = (team) =>
+const generateTeam = (team) => {
     console.log(team);
 
     const html = [];
@@ -72,7 +72,7 @@ const generateTeam = (team) =>
 
 // combine team members // 
     return html.join('');
-
+}
 // exports to assemble team // 
 module.exports = team => {
 
