@@ -7,11 +7,13 @@ const generateTeam = (team) => {
     const generateManager = manager => {
         console.log(manager);
         let managerHtml = `
-    <div class="card" style="width: 18rem;">
-        <div class="card-header">
+        div class="col-6 col-md-4">
+        <div class="card-employee-card">
+          <div class="manager-body">
+            <div class="card text-white bg-primary mb-3">
         ${manager.name} <br/>
-        <i class="fa-solid fa-mug-hot"></i>Manager</div>
-          <ul class="list-group list-group-flush">
+        <h2><i class="fa-solid fa-mug-hot"></i>Manager</h2>
+        <ul class="list-group">
             <li class="list-group-item">ID: ${manager.id}</li>
             <li class="list-group-item">Email: <span id ="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
             <li class="list-group-item">Office Number: ${manager.officeNUmber}</li>
@@ -25,11 +27,13 @@ const generateTeam = (team) => {
     const generateEngineer = engineer => {
         console.log(engineer);
         let engineerHtml = `
-    <div class="card" style="width: 18rem;">
-        <div class="card-header">
+        div class="col-6 col-md-4">
+        <div class="card-employee-card">
+          <div class="engineer-body">
+            <div class="card text-white bg-primary mb-3">
         ${engineer.name} <br/>
-        <i class="fa-solid fa-mug-hot"></i>Manager</div>
-        <ul class="list-group list-group-flush">
+        <h2><i class="fa-solid fa-chalkboard-user"></i>Engineer</h2>
+        <ul class="list-group">
             <li class="list-group-item">ID: ${engineer.id}</li>
             <li class="list-group-item">Email: <span id ="email"><a href="mailto:${engineer.email}">${engineer.githubemail}</a></span></li>
             <li class="list-group-item">Github Username: <a target="_blank" href="https://github.com${engineer.githubUsername}">${engineer.githubUsername}</a></li>
@@ -43,11 +47,13 @@ const generateTeam = (team) => {
     const generateIntern = intern => {
         console.log(intern);
         let internHtml = `
-    <div class="card" style="width: 18rem;">
-        <div class="card-header">
+        div class="col-6 col-md-4">
+        <div class="card-employee-card">
+          <div class="intern-body">
+            <div class="card text-white bg-primary mb-3">
         ${intern.name} <br/>
-        <i class="fa-solid fa-mug-hot"></i>Manager</div>
-        <ul class="list-group list-group-flush">
+        <h2><i class="fa-solid fa-graduation-cap"></i>Intern</h2>
+        <ul class="list-group">
             <li class="list-group-item">ID: ${intern.id}</li>
             <li class="list-group-item">Email: <span id ="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
             <li class="list-group-item">School: ${intern.school}</li>
@@ -92,7 +98,7 @@ module.exports = team => {
       <h1 class="display-4">My Team</h1>
   </header>
 
-  <main> ${generateTeam(team)} </main>
+  <main> ${generateTeam(teamMembers)} </main>
 
   </body>
   </html>
