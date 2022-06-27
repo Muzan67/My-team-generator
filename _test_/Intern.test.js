@@ -1,6 +1,8 @@
 const Intern = require('../lib/Intern');
 const intern = new Intern('alejandro', '10128', 'ac.tendo67@gmail.com', 'Guggenheim');
 
+jest.mock('../lib/Employee');
+
 test('creat an Intern object', () => {
     expect(intern.name).toBe('alejandro');
     expect(intern.id).toBe('10128');

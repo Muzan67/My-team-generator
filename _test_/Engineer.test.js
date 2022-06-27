@@ -1,6 +1,8 @@
 const Engineer = require('../lib/Engineer');
 const Enginerr = new Engineer('alejandro', '10128', 'ac.tendo67@gmail.com', 'Muzan67');
 
+jest.mock('../lib/Employee');
+
 test('creat an Engineer object', () => {
     expect(engineer.name).toBe('alejandro');
     expect(engineer.id).toBe('10128');

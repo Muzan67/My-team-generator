@@ -1,6 +1,8 @@
 const Manager = require('../lib/Manager');
 const manager = new Manager('alejandro', '10128', 'ac.tendo67@gmail.com', '1071g');
 
+jest.mock('../lib/Employee.js');
+
 test('creat an Manager object', () => {
     expect(manager.name).toBe('alejandro');
     expect(manager.id).toBe('10128');
