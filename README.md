@@ -1,8 +1,8 @@
 # Screen Castify Video of HTML Generator
-![https://drive.google.com/file/d/1wGewImQv8yleKrBNhEQ8HYMucdM-MVmL/view]
+ https://drive.google.com/file/d/1wGewImQv8yleKrBNhEQ8HYMucdM-MVmL/view
 
 # Screen Castify Video of Jest Tests
-![https://drive.google.com/file/d/1oB7RMTRNbPElFIwmfLfIrgrFrwU8DDSN/view]
+ https://drive.google.com/file/d/1oB7RMTRNbPElFIwmfLfIrgrFrwU8DDSN/view
 
 # MIT LIcense   
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
