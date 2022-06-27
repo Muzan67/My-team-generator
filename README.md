@@ -18,3 +18,5 @@ Created cards, grids, and color for each profile.
 
 Font Awesome - https://fontawesome.com/icons
 Used the icons available to add to each employee profile.
+
+Window prompt() - https://www.w3schools.com/jsref/met_win_prompt.asp

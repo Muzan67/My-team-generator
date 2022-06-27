@@ -109,10 +109,11 @@ module.exports = team => {
     </header>
   
     <body>
-    <main class="container my-5">
+      <main> 
+      <main class="container my-5">
       <div class="row">
-
-  <main> ${generateTeam(team)} </main>
+      ${generateTeam(team)}
+       </main>
 
   </body>
   </row>
