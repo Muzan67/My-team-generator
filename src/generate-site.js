@@ -25,7 +25,7 @@ const generateTeam = (team) => {
     }
 
     // combine team members // 
-    return html.join(team);
+    return html.join("");
 };
 
     // generate Manager // 
@@ -42,8 +42,11 @@ const generateTeam = (team) => {
             <li class="list-group-item">id: ${manager.id}</li>
             <li class="list-group-item">email: <span id ="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
             <li class="list-group-item">officeNumber: ${manager.officeNumber}</li>
-          </ul>
-    </div>
+        </ul>
+            </div>
+          </div>
+        </div>
+        </div>
     `;
     // html.push(managerHtml);
     };
@@ -63,7 +66,10 @@ const generateTeam = (team) => {
             <li class="list-group-item">email: <span id ="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
             <li class="list-group-item">githubUsername: <a target="_blank" href="https://github.com${engineer.githubUsername}">${engineer.githubUsername}</a></li>
         </ul>
-    </div>
+            </div>
+           </div>
+        </div>
+        </div>
     `;
     // html.push(engineerHtml);
     };
@@ -83,7 +89,10 @@ const generateTeam = (team) => {
             <li class="list-group-item">email: <span id ="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
             <li class="list-group-item">school: ${intern.school}</li>
         </ul>
-    </div>
+            </div>
+          </div>
+        </div>
+        </div>
     `;
     // html.push(internHtml);
     };
