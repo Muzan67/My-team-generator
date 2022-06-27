@@ -68,7 +68,7 @@ const promptManager = () => {
     },   
   ]).then(answers => {
     console.log(answers);
-    const manager = new Manager(answers.name, answers.Id, answers.email, answers.officeNumber);
+    const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
     teamMembers.push(manager);
     promptTeam();
     })
@@ -158,7 +158,7 @@ const promptEngineer = () => {
     }
     ]).then(answers => {
         console.log(answers);
-        const engineer = new Engineer(answers.name, answers.Id, answers.email, answers.githubUsername);
+        const engineer = new Engineer(answers.name, answers.id, answers.email, answers.githubUsername);
         teamMembers.push(engineer);
         promptTeam();
     })
@@ -202,8 +202,8 @@ const promptIntern = () => {
      type: 'input',
      name: 'email',
      message: 'What is your team interns email? (Required)',
-     validate: schoolInput => {
-       if (schoolInput) {
+     validate: emailInput => {
+       if (emailInput) {
          return true;
      } else {
       console.log('Please enter your team interns email!');
@@ -226,7 +226,7 @@ const promptIntern = () => {
   }   
 ]).then(answers => {
       console.log(answers);
-      const intern = new Intern(answers.name, answers.Id, answers.email, answers.school);
+      const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
       teamMembers.push(intern);
         promptTeam();
     })
@@ -234,21 +234,20 @@ const promptIntern = () => {
 
 // TODO: Create a function to write index.HTML file //
 
-const assembleTeam = () =>
+const assembleTeam = () => {
   console.log(`
 ================
 Assemble My Team
 ================
 `);
 
-// Creates the path after prompts have been selected to create index.HTML file //
-if (!fs.existsSync(OUTPUT_DIR)) {
-    fs.mkdirSync(OUTPUT_DIR)
+  // Creates the path after prompts have been selected to create index.HTML file //
+  if (!fs.existsSync(OUTPUT_DIR)) {
+      fs.mkdirSync(OUTPUT_DIR);
   }
-  module.exports = (teamMembers) => {
-    fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
-  }
+  fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
+};
 
-  promptManager();
+promptManager();
 
 

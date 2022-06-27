@@ -39,9 +39,9 @@ const generateTeam = (team) => {
         ${manager.name} <br/>
         <h2><i class="fa-solid fa-mug-hot"></i>Manager</h2>
         <ul class="list-group">
-            <li class="list-group-item">Id: ${manager.Id}</li>
-            <li class="list-group-item">Email: <span id ="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
-            <li class="list-group-item">Office-Number: ${manager.officeNumber}</li>
+            <li class="list-group-item">id: ${manager.id}</li>
+            <li class="list-group-item">email: <span id ="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
+            <li class="list-group-item">officeNumber: ${manager.officeNumber}</li>
           </ul>
     </div>
     `;
@@ -59,9 +59,9 @@ const generateTeam = (team) => {
         ${engineer.name} <br/>
         <h2><i class="fa-solid fa-chalkboard-user"></i>Engineer</h2>
         <ul class="list-group">
-            <li class="list-group-item">Id: ${engineer.Id}</li>
-            <li class="list-group-item">Email: <span id ="email"><a href="mailto:${engineer.email}">${engineer.githubemail}</a></span></li>
-            <li class="list-group-item">Github-Username: <a target="_blank" href="https://github.com${engineer.githubUsername}">${engineer.githubUsername}</a></li>
+            <li class="list-group-item">id: ${engineer.id}</li>
+            <li class="list-group-item">email: <span id ="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
+            <li class="list-group-item">githubUsername: <a target="_blank" href="https://github.com${engineer.githubUsername}">${engineer.githubUsername}</a></li>
         </ul>
     </div>
     `;
@@ -79,9 +79,9 @@ const generateTeam = (team) => {
         ${intern.name} <br/>
         <h2><i class="fa-solid fa-graduation-cap"></i>Intern</h2>
         <ul class="list-group">
-            <li class="list-group-item">Id: ${intern.Id}</li>
-            <li class="list-group-item">Email: <span id ="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
-            <li class="list-group-item">School: ${intern.school}</li>
+            <li class="list-group-item">id: ${intern.id}</li>
+            <li class="list-group-item">email: <span id ="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
+            <li class="list-group-item">school: ${intern.school}</li>
         </ul>
     </div>
     `;
@@ -102,11 +102,15 @@ module.exports = team => {
     <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <header>
-    <div class="jumbotron">
-      <h1 class="display-4">My Team</h1>
-  </header>
+    </head>
+    <header>
+      <div class="jumbotron">
+        <h1 class="display-4">My Team</h1>
+    </header>
+  
+    <body>
+    <main class="container my-5">
+      <div class="row">
 
   <main> ${generateTeam(team)} </main>
 
