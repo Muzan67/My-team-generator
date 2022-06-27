@@ -57,8 +57,8 @@ const promptManager = () => {
       type: 'input',
       name: 'office',
       message: 'What is your team managers office number? (Required)',
-      validate: officeNumberInput => {
-        if (officeNumberInput) {
+      validate: officeNumber => {
+        if (officeNumber) {
           return true;
         } else {
           console.log('Please enter your team managers office number!');
