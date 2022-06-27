@@ -1,7 +1,7 @@
 const Engineer = require('../lib/Engineer');
-const Enginerr = new Engineer('alejandro', '10128', 'ac.tendo67@gmail.com', 'Muzan67');
+const engineer = new Engineer('selene', '10128', 'ac.tendo67@gmail.com', 'Muzan67');
 
-jest.mock('../lib/Employee');
+jest.mock('../lib/Employee.js');
 
 test('creat an Engineer object', () => {
     expect(engineer.name).toBe('alejandro');
@@ -23,7 +23,7 @@ test('creat an Email object', () => {
 });
 
 test('creat an Github Username object', () => {   
-    expect(engineer.getGithubUsername()).toBe('Muzan67');
+    expect(engineer.getgithubUsername()).toBe('Muzan67');
 });
 
 test('creat an Role object', () => {

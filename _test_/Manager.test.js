@@ -9,7 +9,7 @@ test('creat an Manager object', () => {
     expect(manager.email).toBe('ac.tendo67@gmail.com');
     expect(manager.officeNumber).toBe('1071g');
 });
-
+debugger
 test('creat a Name object', () => {
     expect(manager.getName()).toBe('alejandro');
 });

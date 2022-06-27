@@ -1,8 +1,6 @@
 # Screen Castify Video of HTML Generator
 https://drive.google.com/file/d/1wGewImQv8yleKrBNhEQ8HYMucdM-MVmL/view
 
-# Screen Casitify Video of Tests Passing
-
 # My-team-generator
 The Team Generator has been created for the user who is looking to create their team members with their names. unique Id's, emails, and other unique requests specific to their job titles. 
 
@@ -14,10 +12,6 @@ When we run on the command line npm run test and choose any js file we have in t
 
 NPM Inquirer - https://www.npmjs.com/package/inquirer
 NPM Inquirer provides an easy way to capture user input in Node.js command line which provides the function for asking questions and returning answers from the user.
-
-
-
-# Credit
 
 Bootstrap - https://getbootstrap.com/
 Created cards, grids, and color for each profile.
