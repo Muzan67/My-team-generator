@@ -1,7 +1,7 @@
 # Screen Castify Video of HTML Generator
 https://drive.google.com/file/d/1wGewImQv8yleKrBNhEQ8HYMucdM-MVmL/view
 
-# Screen Castify Video of HTMl Generator
+# Screen Castify Video of Jest Tests
 https://drive.google.com/file/d/1oB7RMTRNbPElFIwmfLfIrgrFrwU8DDSN/view
 
 # My-team-generator
