@@ -32,5 +32,5 @@ The prompt() method returns the input value if the user clicks "OK", otherwise i
 Super operator - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super
 The super() function is used to give access to methods and properties of a parent or sibling class. The super() function returns an object that represents the parent class.
 
-# Screenshot of Outpur of Team Generator
+# Screenshot of Output with results of Team Generator after prompts
 ![Team-Generator](https://user-images.githubusercontent.com/102841726/175955282-716d8d2f-b3e8-468a-a710-9c1a39f6ded3.png)
