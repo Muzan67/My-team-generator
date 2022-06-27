@@ -11,10 +11,16 @@ const generateTeam = (team) => {
             console.log(html);
         }
         if (team[i].getRole() === "Engineer") {
+            // console.log('here' + team[i])
             generateEngineer(team[i]);
+            html.push(generateEngineer(team[i]));
+            console.log(html);
         }
         if (team[i].getRole() === "Intern") {
+            // console.log('here' + team[i])
             generateIntern(team[i]);
+            html.push(generateIntern(team[i]));
+            console.log(html);
         }
     }
 
@@ -33,9 +39,9 @@ const generateTeam = (team) => {
         ${manager.name} <br/>
         <h2><i class="fa-solid fa-mug-hot"></i>Manager</h2>
         <ul class="list-group">
-            <li class="list-group-item">ID: ${manager.Id}</li>
+            <li class="list-group-item">Id: ${manager.Id}</li>
             <li class="list-group-item">Email: <span id ="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
-            <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
+            <li class="list-group-item">Office-Number: ${manager.officeNumber}</li>
           </ul>
     </div>
     `;
@@ -53,9 +59,9 @@ const generateTeam = (team) => {
         ${engineer.name} <br/>
         <h2><i class="fa-solid fa-chalkboard-user"></i>Engineer</h2>
         <ul class="list-group">
-            <li class="list-group-item">ID: ${engineer.Id}</li>
+            <li class="list-group-item">Id: ${engineer.Id}</li>
             <li class="list-group-item">Email: <span id ="email"><a href="mailto:${engineer.email}">${engineer.githubemail}</a></span></li>
-            <li class="list-group-item">Github Username: <a target="_blank" href="https://github.com${engineer.githubUsername}">${engineer.githubUsername}</a></li>
+            <li class="list-group-item">Github-Username: <a target="_blank" href="https://github.com${engineer.githubUsername}">${engineer.githubUsername}</a></li>
         </ul>
     </div>
     `;
@@ -73,7 +79,7 @@ const generateTeam = (team) => {
         ${intern.name} <br/>
         <h2><i class="fa-solid fa-graduation-cap"></i>Intern</h2>
         <ul class="list-group">
-            <li class="list-group-item">ID: ${intern.Id}</li>
+            <li class="list-group-item">Id: ${intern.Id}</li>
             <li class="list-group-item">Email: <span id ="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
             <li class="list-group-item">School: ${intern.school}</li>
         </ul>

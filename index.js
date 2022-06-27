@@ -243,11 +243,12 @@ Assemble My Team
 
 // Creates the path after prompts have been selected to create index.HTML file //
 if (!fs.existsSync(OUTPUT_DIR)) {
-  fs.mkdirSync(OUTPUT_DIR)
+    fs.mkdirSync(OUTPUT_DIR)
   }
- 
-promptManager().then((data) => {
-  return fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
-});
+  module.exports = (teamMembers) => {
+    fs.writeFileSync(outputPath, generateSite(teamMembers), "utf-8");
+  }
+
+  promptManager();
 
 
