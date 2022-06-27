@@ -115,6 +115,7 @@ module.exports = team => {
   <main> ${generateTeam(team)} </main>
 
   </body>
-  </html>
+  </row>
+</html>
         `;
 };
